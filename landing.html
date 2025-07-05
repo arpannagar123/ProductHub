@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Welcome to ProductHub - Your Ultimate Shopping Destination</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8;
+            color: #334155;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #e2e8f0;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #94a3b8;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #64748b;
+        }
+
+        .hero-background {
+            background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 50%, #2563eb 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-background::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .btn-primary {
+            background-color: #10b981;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 10px rgba(16, 185, 129, 0.3);
+        }
+        .btn-primary:hover {
+            background-color: #059669;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 15px rgba(16, 185, 129, 0.4);
+        }
+
+        .feature-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid transparent;
+        }
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            border-color: #3b82f6;
+        }
+
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 1s ease-out forwards;
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+        .fade-in-up:nth-child(1) { animation-delay: 0.2s; }
+        .fade-in-up:nth-child(2) { animation-delay: 0.4s; }
+        .fade-in-up:nth-child(3) { animation-delay: 0.6s; }
+        .feature-item-animate:nth-child(1) { animation-delay: 0.8s; }
+        .feature-item-animate:nth-child(2) { animation-delay: 1.0s; }
+        .feature-item-animate:nth-child(3) { animation-delay: 1.2s; }
+        .cta-animate:nth-child(1) { animation-delay: 0.2s; }
+        .cta-animate:nth-child(2) { animation-delay: 0.4s; }
+        .cta-animate:nth-child(3) { animation-delay: 0.6s; }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+    <nav class="bg-blue-50 shadow-lg p-4 flex flex-col sm:flex-row items-center justify-between border-b-4 border-b-blue-500">
+        <div class="flex items-center mb-4 sm:mb-0">
+            <img src="Product hub.png" alt="Product Hub Logo" class="h-10 w-10 rounded-full mr-3">
+            <span class="text-blue-500 text-xl md:text-2xl font-bold">Product Hub</span>
+        </div>
+        <ul class="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-6">
+            <li><a href="landing.html" class="text-blue-500 font-semibold hover:bg-blue-700 hover:text-white p-2 sm:p-3 rounded-lg transition duration-300 ease-in-out text-base sm:text-lg">Home</a></li>
+            <li><a href="./about.html" class="text-blue-500 font-semibold hover:bg-blue-700 p-2 sm:p-3 hover:text-white rounded-lg transition duration-300 ease-in-out text-base sm:text-lg">About</a></li>
+            <li><a href="index.html" class="text-blue-500 font-semibold hover:bg-blue-700 p-2 sm:p-3 hover:text-white rounded-lg transition duration-300 ease-in-out text-base sm:text-lg">Products</a></li>
+            <li><a href="./cart.html" class="text-blue-500 font-semibold hover:bg-blue-700 p-2 sm:p-3 hover:text-white rounded-lg transition duration-300 ease-in-out text-base sm:text-lg">Cart</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero-background text-white py-20 md:py-32 text-center relative flex-grow flex items-center justify-center">
+        <div class="hero-content container mx-auto px-4">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6 leading-tight fade-in-up">
+                Discover Your Next Favorite Thing
+            </h1>
+            <p class="text-lg sm:text-xl md:text-2xl mb-10 max-w-3xl mx-auto opacity-90 fade-in-up">
+                ProductHub offers an unparalleled selection of high-quality products, from cutting-edge tech to timeless fashion. Shop smart, live better.
+            </p>
+            <a href="index.html" class="inline-block btn-primary text-white font-bold py-3 px-8 sm:py-4 sm:px-10 rounded-full shadow-lg text-lg sm:text-xl fade-in-up">
+                Shop All Products
+            </a>
+        </div>
+    </section>
+
+    <section class="bg-gradient-to-br from-gray-50 to-blue-50 py-16 md:py-24">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-12 fade-in">
+                Why Choose ProductHub?
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+                <div class="feature-card bg-white p-8 rounded-xl shadow-lg text-center feature-item-animate">
+                    <img src="https://imgs.search.brave.com/MnjiIiXgJ0dd6sDqOUCcbG1YtJKi2y3cO_gzBPy0ElY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzEyLzgxLzEyLzEy/LzM2MF9GXzEyODEx/MjEyNzhfYUhTd2hY/dUVNSk5oUGw0MlB1/Ynh5c2FjVXdsczlt/eHQuanBn" alt="Quality Icon" class="mx-auto mb-6 w-40 h-20 rounded-lg max-w-full">
+                    <h3 class="text-xl sm:text-2xl font-semibold text-blue-700 mb-4">Unbeatable Quality</h3>
+                    <p class="text-gray-600 text-base leading-relaxed">
+                        We meticulously curate our collection to ensure every product meets the highest standards of quality and durability.
+                    </p>
+                </div>
+                <div class="feature-card bg-white p-8 rounded-xl shadow-lg text-center feature-item-animate">
+                    <img src="https://imgs.search.brave.com/cCpmfbYkNKG-bDGOZnfOBneAHMJsYAuLrkl8qq7gUgE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9lYWRu/LXdjMDUtOTUwMzAz/OS5ueGVkZ2UuaW8v/d3AtY29udGVudC91/cGxvYWRzLzIwMjMv/MDUvQVRTX0xvZ2lz/dGljc19DaW5jaW5u/YXRpX09oaW9fRXhw/ZWRpdGVkX0ZyZWln/aHRfU2hpcHBpbmct/MS1zY2FsZWQuanBn" alt="Fast Shipping Icon" class="mx-auto mb-6 w-40 h-20 rounded-lg max-w-full">
+                    <h3 class="text-xl sm:text-2xl font-semibold text-green-700 mb-4">Fast & Reliable Shipping</h3>
+                    <p class="text-gray-600 text-base leading-relaxed">
+                        Get your orders delivered quickly and safely to your doorstep with our efficient logistics network.
+                    </p>
+                </div>
+                <div class="feature-card bg-white p-8 rounded-xl shadow-lg text-center feature-item-animate">
+                    <img src="https://imgs.search.brave.com/gDvDjrve356zPHeyUs7-5rUxBwHocfQ0oZfCMg9YhLE/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/c2VjdG9ybGluay5j/b20vaW1nL2Jsb2cv/ZXhjZXB0aW9uYWwt/c3VwcG9ydC5qcGc" alt="Customer Support Icon" class="mx-auto mb-6 w-40 h-20 rounded-lg max-w-full">
+                    <h3 class="text-xl sm:text-2xl font-semibold text-purple-700 mb-4">Exceptional Support</h3>
+                    <p class="text-gray-600 text-base leading-relaxed">
+                        Our dedicated customer service team is always here to assist you with any queries or concerns.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-blue-600 text-white py-16 md:py-20 text-center">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-6 fade-in-up cta-animate">
+                Ready to Start Shopping?
+            </h2>
+            <p class="text-lg sm:text-xl mb-10 max-w-2xl mx-auto opacity-90 fade-in-up cta-animate">
+                Join thousands of satisfied customers and find exactly what you're looking for at ProductHub.
+            </p>
+            <a href="index.html" class="inline-block bg-white text-blue-700 font-bold py-3 px-8 sm:py-4 sm:px-10 rounded-full shadow-lg hover:bg-gray-100 transition duration-300 transform hover:scale-105 text-lg sm:text-xl fade-in-up cta-animate">
+                Browse Our Collection
+            </a>
+        </div>
+    </section>
+
+    <footer class="bg-blue-500 text-white p-6 text-center mt-auto">
+        <div class="container mx-auto">
+            <p class="text-base sm:text-lg mb-2">&copy; 2025 Product Hub. All rights reserved.</p>
+            <ul class="flex flex-col sm:flex-row justify-center space-y-1 sm:space-y-0 sm:space-x-6 text-sm">
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

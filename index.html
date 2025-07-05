@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>ProductHub-Shopping App</title>
+    <style>
+        .object-cover {
+            object-fit: cover;
+        }
+        .h-48 {
+            height: 12rem; 
+        }
+
+        .transition-transform-shadow {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .hover-effect:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #e2e8f0;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #94a3b8;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #64748b;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-100 min-h-screen flex flex-col">
+    <!-- Navigation Bar -->
+    <nav class="bg-blue-50 shadow-lg p-4 flex flex-col sm:flex-row items-center justify-between border-b-4 border-b-blue-500">
+        <div class="flex items-center mb-4 sm:mb-0">
+            <img src="Product hub.png" alt="Product Hub Logo" class="h-10 w-10 rounded-full mr-3">
+            <span class="text-blue-500 text-xl md:text-2xl font-bold">Product Hub</span>
+        </div>
+        <ul class="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-6">
+            <li><a href="./landing.html" class="text-blue-500 font-semibold hover:bg-blue-700 hover:text-white p-2 sm:p-3 rounded-lg transition duration-300 ease-in-out text-base sm:text-lg">Home</a></li>
+            <li><a href="./about.html" class="text-blue-500 font-semibold hover:bg-blue-700 p-2 sm:p-3 hover:text-white rounded-lg transition duration-300 ease-in-out text-base sm:text-lg">About</a></li>
+            <li><a href="./index.html" class="text-blue-700 font-semibold bg-blue-100 p-2 sm:p-3 rounded-lg transition duration-300 ease-in-out text-base sm:text-lg">Products</a></li>
+            <li><a href="./cart.html" class="text-blue-500 font-semibold hover:bg-blue-700 p-2 sm:p-3 hover:text-white rounded-lg transition duration-300 ease-in-out text-base sm:text-lg">Cart</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Area - Product Cards -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 p-4 sm:p-8 md:p-12 flex-grow">
+        <!-- Product Card 1: Nike Shoes -->
+        <div class="bg-blue-50 rounded-xl shadow-lg flex flex-col items-center text-center p-6 transition-transform-shadow hover-effect">
+            <img src="https://imgs.search.brave.com/xM1S8EFwi4FdeQ3DHpMxE-8cAHh8aICjr2ZXTEQZzvk/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAyMC8w/NS8yNy8wNy80MS9u/aWtlLTUyMjYwOTFf/NjQwLmpwZw"
+                 alt="Nike shoes" class="h-48 w-full object-cover rounded-lg mb-4 border border-gray-200">
+            <p class="text-xl sm:text-2xl font-bold text-gray-800 mb-2">Nike Shoes</p>
+            <p class="text-lg sm:text-xl font-semibold text-blue-500 mb-4">$120.00</p>
+            <p class="text-gray-600 text-sm mb-6 leading-relaxed flex-grow">Experience ultimate comfort and style with our latest Nike shoe collection. Perfect for sports or casual wear.</p>
+            <button class="buy-now-btn bg-green-500 text-white font-bold py-2 px-6 rounded-lg w-full mb-3 cursor-pointer
+                           hover:bg-green-600 transition duration-200 shadow-md"
+                    data-product-id="nike-shoes"
+                    data-product-name="Nike Shoes"
+                    data-product-price="120.00"
+                    data-product-image="https://imgs.search.brave.com/xM1S8EFwi4FdeQ3DHpMxE-8cAHh8aICjr2ZXTEQZzvk/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAyMC8w/NS8yNy8wNy80MS9u/aWtlLTUyMjYwOTFf/NjQwLmpwZw">Buy Now</button>
+            <button class="add-to-cart-btn bg-yellow-500 text-white font-bold py-2 px-6 rounded-lg w-full cursor-pointer
+                           hover:bg-yellow-600 transition duration-200 shadow-md"
+                    data-product-id="nike-shoes"
+                    data-product-name="Nike Shoes"
+                    data-product-price="120.00"
+                    data-product-image="https://imgs.search.brave.com/xM1S8EFwi4FdeQ3DHpMxE-8cAHh8aICjr2ZXTEQZzvk/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAyMC8w/NS8yNy8wNy80MS9u/aWtlLTUyMjYwOTFf/NjQwLmpwZw">Add to Cart</button>
+        </div>
+
+        <!-- Product Card 2: Louis Vuitton Bag -->
+        <div class="bg-blue-50 rounded-xl shadow-lg flex flex-col items-center text-center p-6 transition-transform-shadow hover-effect">
+            <img src="https://imgs.search.brave.com/-yOaoNICybhhrGRqC1LwXJS1sweSXeKXr1w7jOx0X2Q/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/c2hvcGlmeS5jb20v/cy9maWxlcy8xLzA1/NjUvMzYzMC8xNzQ1/L2ZpbGVzL21vZGVy/bi1yZXZpZXctd2Zv/LXZzLXdmaC15b3V0/dWJlLXRodW1ibmFp/bC01LnBuZz92PTE3/MDQ0NzY4NjY"
+                 alt="Louis Vuitton" class="h-48 w-full object-cover rounded-lg mb-4 border border-gray-200">
+            <p class="text-xl sm:text-2xl font-bold text-gray-800 mb-2">Louis Vuitton</p>
+            <p class="text-lg sm:text-xl font-semibold text-blue-500 mb-4">$1,500.00</p>
+            <p class="text-gray-600 text-sm mb-6 leading-relaxed flex-grow">Elevate your style with this iconic Louis Vuitton piece, a blend of luxury and timeless design.</p>
+            <button class="buy-now-btn bg-green-500 text-white font-bold py-2 px-6 rounded-lg w-full mb-3 cursor-pointer
+                           hover:bg-green-600 transition duration-200 shadow-md"
+                    data-product-id="louis-vuitton-bag"
+                    data-product-name="Louis Vuitton Bag"
+                    data-product-price="1500.00"
+                    data-product-image="https://imgs.search.brave.com/-yOaoNICybhhrGRqC1LwXJS1sweSXeKXr1w7jOx0X2Q/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/c2hvcGlmeS5jb20v/cy9maWxlcy8xLzA1/NjUvMzYzMC8xNzQ1/L2ZpbGVzL21vZGVy/bi1yZXZpZXctd2Zv/LXZzLXdmaC15b3V0/dWJlLXRodW1ibmFp/bC01LnBuZz92PTE3/MDQ0NzY4NjY">Buy Now</button>
+            <button class="add-to-cart-btn bg-yellow-500 text-white font-bold py-2 px-6 rounded-lg w-full cursor-pointer
+                           hover:bg-yellow-600 transition duration-200 shadow-md"
+                    data-product-id="louis-vuitton-bag"
+                    data-product-name="Louis Vuitton Bag"
+                    data-product-price="1500.00"
+                    data-product-image="https://imgs.search.brave.com/-yOaoNICybhhrGRqC1LwXJS1sweSXeKXr1w7jOx0X2Q/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/c2hvcGlmeS5jb20v/cy9maWxlcy8xLzA1/NjUvMzYzMC8xNzQ1/L2ZpbGVzL21vZGVy/bi1yZXZpZXctd2Zv/LXZzLXdmaC15b3V0/dWJlLXRodW1ibmFp/bC01LnBuZz92PTE3/MDQ0NzY4NjY">Add to Cart</button>
+        </div>
+
+        <!-- Product Card 3: Marvel Backpack -->
+        <div class="bg-blue-50 rounded-xl shadow-lg flex flex-col items-center text-center p-6 transition-transform-shadow hover-effect">
+            <img src="https://imgs.search.brave.com/RGZQ64ky8tm5dSnAfAtxFrk6WxR0Y4eA1egszTbm588/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9paDEu/cmVkYnViYmxlLm5l/dC9pbWFnZS4xNjM1/NzgzMTUzLjI0MTcv/dXIsYmFja3BhY2tf/ZnJvbnQsc3F1YXJl/LDYwMHg2MDAuanBn"
+                 alt="Marvel backpack" class="h-48 w-full object-cover rounded-lg mb-4 border border-gray-200">
+            <p class="text-xl sm:text-2xl font-bold text-gray-800 mb-2">Marvel Backpack</p>
+            <p class="text-lg sm:text-xl font-semibold text-blue-500 mb-4">$45.00</p>
+            <p class="text-gray-600 text-sm mb-6 leading-relaxed flex-grow">Show off your fandom with this durable and stylish Marvel backpack, perfect for school or travel.</p>
+            <button class="buy-now-btn bg-green-500 text-white font-bold py-2 px-6 rounded-lg w-full mb-3 cursor-pointer
+                           hover:bg-green-600 transition duration-200 shadow-md"
+                    data-product-id="marvel-backpack"
+                    data-product-name="Marvel Backpack"
+                    data-product-price="45.00"
+                    data-product-image="https://imgs.search.brave.com/RGZQ64ky8tm5dSnAfAtxFrk6WxR0Y4eA1egszTbm588/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9paDEu/cmVkYnViYmxlLm5l/dC9pbWFnZS4xNjM1/NzgzMTUzLjI0MTcv/dXIsYmFja3BhY2tf/ZnJvbnQsc3F1YXJl/LDYwMHg2MDAuanBn">Buy Now</button>
+            <button class="add-to-cart-btn bg-yellow-500 text-white font-bold py-2 px-6 rounded-lg w-full cursor-pointer
+                           hover:bg-yellow-600 transition duration-200 shadow-md"
+                    data-product-id="marvel-backpack"
+                    data-product-name="Marvel Backpack"
+                    data-product-price="45.00"
+                    data-product-image="https://imgs.search.brave.com/RGZQ64ky8tm5dSnAfAtxFrk6WxR0Y4eA1egszTbm588/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9paDEu/cmVkYnViYmxlLm5l/dC9pbWFnZS4xNjM1/NzgzMTUzLjI0MTcv/dXIsYmFja3BhY2tf/ZnJvbnQsc3F1YXJl/LDYwMHg2MDAuanBn">Add to Cart</button>
+        </div>
+
+        <!-- Product Card 4: Smartwatch -->
+        <div class="bg-blue-50 rounded-xl shadow-lg flex flex-col items-center text-center p-6 transition-transform-shadow hover-effect">
+            <img src="https://imgs.search.brave.com/UtWHdMs8dsvPj91t2QatgpaMdCTrI1ZsKsxjXedWEtk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90aHVt/YnMuZHJlYW1zdGlt/ZS5jb20vYi9tb2Rl/cm4tc21hcnR3YXRj/aC1kaXNwbGF5aW5n/LWZpdG5lc3MtbWV0/cmljcy1idXN0bGlu/Zy11cmJhbi1lbnZp/cm9ubWVudC1ibHVy/cnktY2l0eS1saWdo/dHMtZHVzay1zaG93/Y2FzaW5nLWNsb3Nl/LXVwLTM1MzA5NDc4/MC5qcGc"
+                 alt="Smartwatch" class="h-48 w-full object-cover rounded-lg mb-4 border border-gray-200">
+            <p class="text-xl sm:text-2xl font-bold text-gray-800 mb-2">Smartwatch</p>
+            <p class="text-lg sm:text-xl font-semibold text-blue-500 mb-4">$199.99</p>
+            <p class="text-gray-600 text-sm mb-6 leading-relaxed flex-grow">Stay connected and track your fitness with this sleek and feature-rich smartwatch.</p>
+            <button class="buy-now-btn bg-green-500 text-white font-bold py-2 px-6 rounded-lg w-full mb-3 cursor-pointer
+                           hover:bg-green-600 transition duration-200 shadow-md"
+                    data-product-id="smartwatch"
+                    data-product-name="Smartwatch"
+                    data-product-price="199.99"
+                    data-product-image="https://imgs.search.brave.com/UtWHdMs8dsvPj91t2QatgpaMdCTrI1ZsKsxjXedWEtk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90aHVt/YnMuZHJlYW1zdGlt/ZS5jb20vYi9tb2Rl/cm4tc21hcnR3YXRj/aC1kaXNwbGF5aW5n/LWZpdG5lc3MtbWV0/cmljcy1idXN0bGlu/Zy11cmJhbi1lbnZp/cm9ubWVudC1ibHVy/cnktY2l0eS1saWdo/dHMtZHVzay1zaG93/Y2FzaW5nLWNsb3Nl/LXVwLTM1MzA5NDc4/MC5qcGc">Buy Now</button>
+            <button class="add-to-cart-btn bg-yellow-500 text-white font-bold py-2 px-6 rounded-lg w-full cursor-pointer
+                           hover:bg-yellow-600 transition duration-200 shadow-md"
+                    data-product-id="smartwatch"
+                    data-product-name="Smartwatch"
+                    data-product-price="199.99"
+                    data-product-image="https://imgs.search.brave.com/UtWHdMs8dsvPj91t2QatgpaMdCTrI1ZsKsxjXedWEtk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90aHVt/YnMuZHJlYW1zdGlt/ZS5jb20vYi9tb2Rl/cm4tc21hcnR3YXRj/aC1kaXNwbGF5aW5n/LWZpdG5lc3MtbWV0/cmljcy1idXN0bGlu/Zy11cmJhbi1lbnZp/cm9ubWVudC1ibHVy/cnktY2l0eS1saWdo/dHMtZHVzay1zaG93/Y2FzaW5nLWNsb3Nl/LXVwLTM1MzA5NDc4/MC5qcGc">Add to Cart</button>
+        </div>
+
+        <!-- Product Card 5: Wireless Headphones -->
+        <div class="bg-blue-50 rounded-xl shadow-lg flex flex-col items-center text-center p-6 transition-transform-shadow hover-effect">
+            <img src="https://imgs.search.brave.com/MnjiIiXgJ0dd6sDqOUCcbG1YtJKi2y3cO_gzBPy0ElY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzEyLzgxLzEyLzEy/LzM2MF9GXzEyODEx/MjEyNzhfYUhTd2hY/dUVNSk5oUGw0MlB1/Ynh5c2FjVXdsczlt/eHQuanBn"
+                 alt="Wireless Headphones" class="h-48 w-full object-cover rounded-lg mb-4 border border-gray-200">
+            <p class="text-xl sm:text-2xl font-bold text-gray-800 mb-2">Wireless Headphones</p>
+            <p class="text-lg sm:text-xl font-semibold text-blue-500 mb-4">$79.99</p>
+            <p class="text-gray-600 text-sm mb-6 leading-relaxed flex-grow">Immerse yourself in high-quality audio with these comfortable wireless headphones.</p>
+            <button class="buy-now-btn bg-green-500 text-white font-bold py-2 px-6 rounded-lg w-full mb-3 cursor-pointer
+                           hover:bg-green-600 transition duration-200 shadow-md"
+                    data-product-id="wireless-headphones"
+                    data-product-name="Wireless Headphones"
+                    data-product-price="79.99"
+                    data-product-image="https://imgs.search.brave.com/MnjiIiXgJ0dd6sDqOUCcbG1YtJKi2y3cO_gzBPy0ElY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzEyLzgxLzEyLzEy/LzM2MF9GXzEyODEx/MjEyNzhfYUhTd2hY/dUVNSk5oUGw0MlB1/Ynh5c2FjVXdsczlt/eHQuanBn">Buy Now</button>
+            <button class="add-to-cart-btn bg-yellow-500 text-white font-bold py-2 px-6 rounded-lg w-full cursor-pointer
+                           hover:bg-yellow-600 transition duration-200 shadow-md"
+                    data-product-id="wireless-headphones"
+                    data-product-name="Wireless Headphones"
+                    data-product-price="79.99"
+                    data-product-image="https://imgs.search.brave.com/MnjiIiXgJ0dd6sDqOUCcbG1YtJKi2y3cO_gzBPy0ElY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzEyLzgxLzEyLzEy/LzM2MF9GXzEyODEx/MjEyNzhfYUhTd2hY/dUVNSk5oUGw0MlB1/Ynh5c2FjVXdsczlt/eHQuanBn">Add to Cart</button>
+        </div>
+
+        <!-- Product Card 6: Gaming Console -->
+        <div class="bg-blue-50 rounded-xl shadow-lg flex flex-col items-center text-center p-6 transition-transform-shadow hover-effect">
+            <img src="https://imgs.search.brave.com/Q418YWRSB8l0VLGc_BognXxzbftoSUDVgK6zPS_XFpc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzFnWHN6aVNpTEwu/anBn"
+                 alt="Gaming Console" class="h-48 w-full object-cover rounded-lg mb-4 border border-gray-200">
+            <p class="text-xl sm:text-2xl font-bold text-gray-800 mb-2">Gaming Console</p>
+            <p class="text-lg sm:text-xl font-semibold text-blue-500 mb-4">$399.00</p>
+            <p class="text-gray-600 text-sm mb-6 leading-relaxed flex-grow">Dive into exciting worlds with the latest generation gaming console, offering stunning graphics.</p>
+            <button class="buy-now-btn bg-green-500 text-white font-bold py-2 px-6 rounded-lg w-full mb-3 cursor-pointer
+                           hover:bg-green-600 transition duration-200 shadow-md"
+                    data-product-id="gaming-console"
+                    data-product-name="Gaming Console"
+                    data-product-price="399.00"
+                    data-product-image="https://imgs.search.brave.com/Q418YWRSB8l0VLGc_BognXxzbftoSUDVgK6zPS_XFpc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzFnWHN6aVNpTEwu/anBn">Buy Now</button>
+            <button class="add-to-cart-btn bg-yellow-500 text-white font-bold py-2 px-6 rounded-lg w-full cursor-pointer
+                           hover:bg-yellow-600 transition duration-200 shadow-md"
+                    data-product-id="gaming-console"
+                    data-product-name="Gaming Console"
+                    data-product-price="399.00"
+                    data-product-image="https://imgs.search.brave.com/Q418YWRSB8l0VLGc_BognXxzbftoSUDVgK6zPS_XFpc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzFnWHN6aVNpTEwu/anBn">Add to Cart</button>
+        </div>
+
+        <!-- Product Card 7: Coffee Maker -->
+        <div class="bg-blue-50 rounded-xl shadow-lg flex flex-col items-center text-center p-6 transition-transform-shadow hover-effect">
+            <img src="https://imgs.search.brave.com/_6abmWip_Rgz0Hp3I3q6_kECRDWiWk_LESk7KW7HM78/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wNjAv/MzcyLzAxMC9zbWFs/bC9tb2Rlcm4tY29m/ZmVlLW1ha2VyLWJy/ZXdpbmctcmljaC1h/cm9tYXRpYy1jb2Zm/ZWUtYXQtaG9tZS1w/aG90by5qcGVn"
+                 alt="Coffee Maker" class="h-48 w-full object-cover rounded-lg mb-4 border border-gray-200">
+            <p class="text-xl sm:text-2xl font-bold text-gray-800 mb-2">Coffee Maker</p>
+            <p class="text-lg sm:text-xl font-semibold text-blue-500 mb-4">$85.00</p>
+            <p class="text-gray-600 text-sm mb-6 leading-relaxed flex-grow">Brew the perfect cup every morning with this easy-to-use and efficient coffee maker.</p>
+            <button class="buy-now-btn bg-green-500 text-white font-bold py-2 px-6 rounded-lg w-full mb-3 cursor-pointer
+                           hover:bg-green-600 transition duration-200 shadow-md"
+                    data-product-id="coffee-maker"
+                    data-product-name="Coffee Maker"
+                    data-product-price="85.00"
+                    data-product-image="https://imgs.search.brave.com/_6abmWip_Rgz0Hp3I3q6_kECRDWiWk_LESk7KW7HM78/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wNjAv/MzcyLzAxMC9zbWFs/bC9tb2Rlcm4tY29m/ZmVlLW1ha2VyLWJy/ZXdpbmctcmljaC1h/cm9tYXRpYy1jb2Zm/ZWUtYXQtaG9tZS1w/aG90by5qcGVn">Buy Now</button>
+            <button class="add-to-cart-btn bg-yellow-500 text-white font-bold py-2 px-6 rounded-lg w-full cursor-pointer
+                           hover:bg-yellow-600 transition duration-200 shadow-md"
+                    data-product-id="coffee-maker"
+                    data-product-name="Coffee Maker"
+                    data-product-price="85.00"
+                    data-product-image="https://imgs.search.brave.com/_6abmWip_Rgz0Hp3I3q6_kECRDWiWk_LESk7KW7HM78/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wNjAv/MzcyLzAxMC9zbWFs/bC9tb2Rlcm4tY29m/ZmVlLW1ha2VyLWJy/ZXdpbmctcmljaC1h/cm9tYXRpYy1jb2Zm/ZWUtYXQtaG9tZS1w/aG90by5qcGVn">Add to Cart</button>
+        </div>
+
+        <!-- Product Card 8: Fitness Tracker -->
+        <div class="bg-blue-50 rounded-xl shadow-lg flex flex-col items-center text-center p-6 transition-transform-shadow hover-effect">
+            <img src="https://imgs.search.brave.com/jBkHrtj0r-PCY36vtiVJ-VVgYxL0GH3a8PlcBtbLbuw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/bW9zLmNtcy5mdXR1/cmVjZG4ubmV0L3Ju/NFNaSEpXb1FHTVpU/YUxZcHV3YmkuanBn"
+                 alt="Fitness Tracker" class="h-48 w-full object-cover rounded-lg mb-4 border border-gray-200">
+            <p class="text-xl sm:text-2xl font-bold text-gray-800 mb-2">Fitness Tracker</p>
+            <p class="text-lg sm:text-xl font-semibold text-blue-500 mb-4">$60.00</p>
+            <p class="text-gray-600 text-sm mb-6 leading-relaxed flex-grow">Monitor your health and activity levels with this advanced and comfortable fitness tracker.</p>
+            <button class="buy-now-btn bg-green-500 text-white font-bold py-2 px-6 rounded-lg w-full mb-3 cursor-pointer
+                           hover:bg-green-600 transition duration-200 shadow-md"
+                    data-product-id="fitness-tracker"
+                    data-product-name="Fitness Tracker"
+                    data-product-price="60.00"
+                    data-product-image="https://imgs.search.brave.com/jBkHrtj0r-PCY36vtiVJ-VVgYxL0GH3a8PlcBtbLbuw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/bW9zLmNtcy5mdXR1/cmVjZG4ubmV0L3Ju/NFNaSEpXb1FHTVpU/YUxZcHV3YmkuanBn">Buy Now</button>
+            <button class="add-to-cart-btn bg-yellow-500 text-white font-bold py-2 px-6 rounded-lg w-full cursor-pointer
+                           hover:bg-yellow-600 transition duration-200 shadow-md"
+                    data-product-id="fitness-tracker"
+                    data-product-name="Fitness Tracker"
+                    data-product-price="60.00"
+                    data-product-image="https://imgs.search.brave.com/jBkHrtj0r-PCY36vtiVJ-VVgYxL0GH3a8PlcBtbLbuw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/bW9zLmNtcy5mdXR1/cmVjZG4ubmV0L3Ju/NFNaSEpXb1FHTVpU/YUxZcHV3YmkuanBn">Add to Cart</button>
+        </div>
+
+        <!-- Product Card 9: Portable Speaker -->
+        <div class="bg-blue-50 rounded-xl shadow-lg flex flex-col items-center text-center p-6 transition-transform-shadow hover-effect">
+            <img src="https://imgs.search.brave.com/Yy0wD7yctEM3cElj06qGsnP9T_BOdQBUTGTKJmE4NfY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzFtcSsyRWpSZkwu/anBn"
+                 alt="Portable Speaker" class="h-48 w-full object-cover rounded-lg mb-4 border border-gray-200">
+            <p class="text-xl sm:text-2xl font-bold text-gray-800 mb-2">Portable Speaker</p>
+            <p class="text-lg sm:text-xl font-semibold text-blue-500 mb-4">$55.00</p>
+            <p class="text-gray-600 text-sm mb-6 leading-relaxed flex-grow">Enjoy your music anywhere with this compact and powerful portable speaker.</p>
+            <button class="buy-now-btn bg-green-500 text-white font-bold py-2 px-6 rounded-lg w-full mb-3 cursor-pointer
+                           hover:bg-green-600 transition duration-200 shadow-md"
+                    data-product-id="portable-speaker"
+                    data-product-name="Portable Speaker"
+                    data-product-price="55.00"
+                    data-product-image="https://imgs.search.brave.com/Yy0wD7yctEM3cElj06qGsnP9T_BOdQBUTGTKJmE4NfY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzFtcSsyRWpSZkwu/anBn">Buy Now</button>
+            <button class="add-to-cart-btn bg-yellow-500 text-white font-bold py-2 px-6 rounded-lg w-full cursor-pointer
+                           hover:bg-yellow-600 transition duration-200 shadow-md"
+                    data-product-id="portable-speaker"
+                    data-product-name="Portable Speaker"
+                    data-product-price="55.00"
+                    data-product-image="https://imgs.search.brave.com/Yy0wD7yctEM3cElj06qGsnP9T_BOdQBUTGTKJmE4NfY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzFtcSsyRWpSZkwu/anBn">Add to Cart</button>
+        </div>
+
+        <!-- Product Card 10: Smart Home Hub -->
+        <div class="bg-blue-50 rounded-xl shadow-lg flex flex-col items-center text-center p-6 transition-transform-shadow hover-effect">
+            <img src="https://imgs.search.brave.com/g_tW9GWN08eEVzl3-NsqJdRIrcDD5ZUsmtcE2atetCg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/cHJlbWl1bS1waG90/by9mdXR1cmlzdGlj/LXNtYXJ0LWhvbWUt/aHViLWNlbnRyYWwt/ZGV2aWNlLW1hbmFn/aW5nLWFsbC1zbWFy/dC1ob21lLWZ1bmN0/aW9ucy10aHJvdWdo/LWFpXzEyMzAyNTMt/MjA0MTMuanBnP3Nl/bXQ9YWlzX2h5YnJp/ZCZ3PTc0MA"
+                 alt="Smart Home Hub" class="h-48 w-full object-cover rounded-lg mb-4 border border-gray-200">
+            <p class="text-xl sm:text-2xl font-bold text-gray-800 mb-2">Smart Home Hub</p>
+            <p class="text-lg sm:text-xl font-semibold text-blue-500 mb-4">$150.00</p>
+            <p class="text-gray-600 text-sm mb-6 leading-relaxed flex-grow">Control all your smart devices from one central hub for ultimate convenience.</p>
+            <button class="buy-now-btn bg-green-500 text-white font-bold py-2 px-6 rounded-lg w-full mb-3 cursor-pointer
+                           hover:bg-green-600 transition duration-200 shadow-md"
+                    data-product-id="smart-home-hub"
+                    data-product-name="Smart Home Hub"
+                    data-product-price="150.00"
+                    data-product-image="https://imgs.search.brave.com/g_tW9GWN08eEVzl3-NsqJdRIrcDD5ZUsmtcE2atetCg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/cHJlbWl1bS1waG90/by9mdXR1cmlzdGlj/LXNtYXJ0LWhvbWUt/aHViLWNlbnRyYWwt/ZGV2aWNlLW1hbmFn/aW5nLWFsbC1zbWFy/dC1ob21lLWZ1bmN0/aW9ucy10aHJvdWdo/LWFpXzEyMzAyNTMt/MjA0MTMuanBnP3Nl/bXQ9YWlzX2h5YnJp/ZCZ3PTc0MA">Buy Now</button>
+            <button class="add-to-cart-btn bg-yellow-500 text-white font-bold py-2 px-6 rounded-lg w-full cursor-pointer
+                           hover:bg-yellow-600 transition duration-200 shadow-md"
+                    data-product-id="smart-home-hub"
+                    data-product-name="Smart Home Hub"
+                    data-product-price="150.00"
+                    data-product-image="https://imgs.search.brave.com/g_tW9GWN08eEVzl3-NsqJdRIrcDD5ZUsmtcE2atetCg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/cHJlbWl1bS1waG90/by9mdXR1cmlzdGlj/LXNtYXJ0LWhvbWUt/aHViLWNlbnRyYWwt/ZGV2aWNlLW1hbmFn/aW5nLWFsbC1zbWFy/dC1ob21lLWZ1bmN0/aW9ucy10aHJvdWdo/LWFpXzEyMzAyNTMt/MjA0MTMuanBnP3Nl/bXQ9YWlzX2h5YnJp/ZCZ3PTc0MA">Add to Cart</button>
+        </div>
+
+        <!-- Product Card 11: Ergonomic Office Chair -->
+        <div class="bg-blue-50 rounded-xl shadow-lg flex flex-col items-center text-center p-6 transition-transform-shadow hover-effect">
+            <img src="https://imgs.search.brave.com/TKOw5QWzIHVHc6mVPJtit1ykImPgT7BVO4DIpMvEz2c/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzF3QmxGQ3hISUwu/anBn"
+                 alt="Ergonomic Office Chair" class="h-48 w-full object-cover rounded-lg mb-4 border border-gray-200">
+            <p class="text-xl sm:text-2xl font-bold text-gray-800 mb-2">Ergonomic Office Chair</p>
+            <p class="text-lg sm:text-xl font-semibold text-blue-500 mb-4">$250.00</p>
+            <p class="text-gray-600 text-sm mb-6 leading-relaxed flex-grow">Work in comfort with this ergonomic chair designed for long hours and proper posture.</p>
+            <button class="buy-now-btn bg-green-500 text-white font-bold py-2 px-6 rounded-lg w-full mb-3 cursor-pointer
+                           hover:bg-green-600 transition duration-200 shadow-md"
+                    data-product-id="ergonomic-chair"
+                    data-product-name="Ergonomic Office Chair"
+                    data-product-price="250.00"
+                    data-product-image="https://imgs.search.brave.com/TKOw5QWzIHVHc6mVPJtit1ykImPgT7BVO4DIpMvEz2c/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzF3QmxGQ3hISUwu/anBn">Buy Now</button>
+            <button class="add-to-cart-btn bg-yellow-500 text-white font-bold py-2 px-6 rounded-lg w-full cursor-pointer
+                           hover:bg-yellow-600 transition duration-200 shadow-md"
+                    data-product-id="ergonomic-chair"
+                    data-product-name="Ergonomic Office Chair"
+                    data-product-price="250.00"
+                    data-product-image="https://imgs.search.brave.com/TKOw5QWzIHVHc6mVPJtit1ykImPgT7BVO4DIpMvEz2c/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzF3QmxGQ3hISUwu/anBn">Add to Cart</button>
+        </div>
+
+        <!-- Product Card 12: Iphone -->
+        <div class="bg-blue-50 rounded-xl shadow-lg flex flex-col items-center text-center p-6 transition-transform-shadow hover-effect">
+            <img src="https://imgs.search.brave.com/yttuTqbImfO3K0zlRplqbUDuibGXYFtWnUvWFO0qs_I/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/ZHhvbWFyay5jb20v/d3AtY29udGVudC91/cGxvYWRzL2RyYWZ0/cy9wb3N0LTE3ODU2/OC9BcHBsZS1pUGhv/bmUtMTYtUHJvLU1h/eF9mZWF0dXJlZC1p/bWFnZS1wYWNrc2hv/dC1yZXZpZXcucG5n "
+                 alt="Digital Camera" class="h-48 w-full object-cover rounded-lg mb-4 border border-gray-200">
+            <p class="text-xl sm:text-2xl font-bold text-gray-800 mb-2">Iphone 16 Pro Max</p>
+            <p class="text-lg sm:text-xl font-semibold text-blue-500 mb-4">$599.00</p>
+            <p class="text-gray-600 text-sm mb-6 leading-relaxed flex-grow">Best Phone in the market right now.Super fast and very much usable.</p>
+            <button class="buy-now-btn bg-green-500 text-white font-bold py-2 px-6 rounded-lg w-full mb-3 cursor-pointer
+                           hover:bg-green-600 transition duration-200 shadow-md"
+                    data-product-id="iphone-16-pro-max"
+                    data-product-name="Iphone 16 Pro Max"
+                    data-product-price="599.00"
+                    data-product-image="https://imgs.search.brave.com/yttuTqbImfO3K0zlRplqbUDuibGXYFtWnUvWFO0qs_I/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/ZHhvbWFyay5jb20v/d3AtY29udGVudC91/cGxvYWRzL2RyYWZ0/cy9wb3N0LTE3ODU2/OC9BcHBsZS1pUGhv/bmUtMTYtUHJvLU1h/eF9mZWF0dXJlZC1p/bWFnZS1wYWNrc2hv/dC1yZXZpZXcucG5n">Buy Now</button>
+            <button class="add-to-cart-btn bg-yellow-500 text-white font-bold py-2 px-6 rounded-lg w-full cursor-pointer
+                           hover:bg-yellow-600 transition duration-200 shadow-md"
+                    data-product-id="iphone-16-pro-max"
+                    data-product-name="Iphone 16 Pro Max"
+                    data-product-price="599.00"
+                    data-product-image="https://imgs.search.brave.com/yttuTqbImfO3K0zlRplqbUDuibGXYFtWnUvWFO0qs_I/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/ZHhvbWFyay5jb20v/d3AtY29udGVudC91/cGxvYWRzL2RyYWZ0/cy9wb3N0LTE3ODU2/OC9BcHBsZS1pUGhv/bmUtMTYtUHJvLU1h/eF9mZWF0dXJlZC1p/bWFnZS1wYWNrc2hv/dC1yZXZpZXcucG5n">Add to Cart</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-blue-500 text-white p-6 text-center mt-auto">
+        <div class="container mx-auto">
+            <p class="text-base sm:text-lg mb-2">&copy; 2025 Product Hub. All rights reserved.</p>
+            <ul class="flex flex-col sm:flex-row justify-center space-y-1 sm:space-y-0 sm:space-x-6 text-sm">
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
+            const buyNowButtons = document.querySelectorAll('.buy-now-btn');
+
+            // Function to add product to cart
+            function addProductToCart(productId, productName, productPrice, productImage, quantity = 1) {
+                let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+                const existingProductIndex = cart.findIndex(item => item.id === productId);
+
+                if (existingProductIndex > -1) {
+                    cart[existingProductIndex].quantity += quantity;
+                } else {
+                    cart.push({
+                        id: productId,
+                        name: productName,
+                        price: productPrice,
+                        image: productImage,
+                        quantity: quantity
+                    });
+                }
+                localStorage.setItem('cart', JSON.stringify(cart));
+            }
+
+            addToCartButtons.forEach(button => {
+                button.addEventListener('click', (event) => {
+                    const productId = event.target.dataset.productId;
+                    const productName = event.target.dataset.productName;
+                    const productPrice = parseFloat(event.target.dataset.productPrice);
+                    const productImage = event.target.dataset.productImage;
+                    
+                    addProductToCart(productId, productName, productPrice, productImage);
+                    alert(`${productName} added to cart!`); // Simple feedback
+                });
+            });
+
+            buyNowButtons.forEach(button => {
+                button.addEventListener('click', (event) => {
+                    const productId = event.target.dataset.productId;
+                    const productName = event.target.dataset.productName;
+                    const productPrice = parseFloat(event.target.dataset.productPrice);
+                    const productImage = event.target.dataset.productImage;
+
+                    // Add the product to cart
+                    addProductToCart(productId, productName, productPrice, productImage);
+                    
+                    // Redirect to the cart page
+                    window.location.href = './cart.html';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

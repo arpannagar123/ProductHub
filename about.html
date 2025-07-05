@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>About ProductHub - Our Story, Values & Team</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8;
+            color: #334155;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #e2e8f0;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #94a3b8;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #64748b;
+        }
+
+        .about-hero-background {
+            background: linear-gradient(135deg, #a78bfa 0%, #8b5cf6 50%, #7c3aed 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .about-hero-background::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+        .about-hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .btn-primary {
+            background-color: #10b981;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 10px rgba(16, 185, 129, 0.3);
+        }
+        .btn-primary:hover {
+            background-color: #059669;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 15px rgba(16, 185, 129, 0.4);
+        }
+
+        .card-hover-effect {
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            border: 1px solid transparent;
+        }
+        .card-hover-effect:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            border-color: #3b82f6;
+        }
+
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 1s ease-out forwards;
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+        .animate-delay-02 { animation-delay: 0.2s; }
+        .animate-delay-04 { animation-delay: 0.4s; }
+        .animate-delay-06 { animation-delay: 0.6s; }
+        .animate-delay-08 { animation-delay: 0.8s; }
+        .animate-delay-10 { animation-delay: 1.0s; }
+        .animate-delay-12 { animation-delay: 1.2s; }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+    <nav class="bg-blue-50 shadow-lg p-4 flex flex-col sm:flex-row items-center justify-between border-b-4 border-b-blue-500">
+        <div class="flex items-center mb-4 sm:mb-0">
+            <img src="Product hub.png" alt="Product Hub Logo" class="h-10 w-10 rounded-full mr-3">
+            <span class="text-blue-500 text-xl md:text-2xl font-bold">Product Hub</span>
+        </div>
+        <ul class="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-6">
+            <li><a href="landing.html" class="text-blue-500 font-semibold hover:bg-blue-700 hover:text-white p-2 sm:p-3 rounded-lg transition duration-300 ease-in-out text-base sm:text-lg">Home</a></li>
+            <li><a href="about.html" class="text-blue-700 font-semibold bg-blue-100 p-2 sm:p-3 rounded-lg transition duration-300 ease-in-out text-base sm:text-lg">About</a></li>
+            <li><a href="index.html" class="text-blue-500 font-semibold hover:bg-blue-700 p-2 sm:p-3 hover:text-white rounded-lg transition duration-300 ease-in-out text-base sm:text-lg">Products</a></li>
+            <li><a href="cart.html" class="text-blue-500 font-semibold hover:bg-blue-700 p-2 sm:p-3 hover:text-white rounded-lg transition duration-300 ease-in-out text-base sm:text-lg">Cart</a></li>
+        </ul>
+    </nav>
+
+    <section class="about-hero-background text-white py-20 md:py-32 text-center relative flex-grow flex items-center justify-center">
+        <div class="about-hero-content container mx-auto px-4">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6 leading-tight fade-in-up animate-delay-02">
+                About ProductHub
+            </h1>
+            <p class="text-lg sm:text-xl md:text-2xl mb-10 max-w-3xl mx-auto opacity-90 fade-in-up animate-delay-04">
+                Our journey to redefine online shopping, driven by passion, quality, and community.
+            </p>
+        </div>
+    </section>
+
+    <section class="bg-white py-16 md:py-24">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-12 fade-in">Our Story</h2>
+            <div class="flex flex-col md:flex-row items-center md:space-x-12">
+                <div class="md:w-full fade-in-up animate-delay-06">
+                    <p class="text-gray-700 text-base sm:text-lg leading-relaxed mb-6">
+                        ProductHub was founded in 2020 with a simple yet ambitious vision: to create an online shopping destination where quality meets convenience. Frustrated by endless scrolling through mediocre products, our founders envisioned a platform that meticulously curates only the best, ensuring every purchase brings joy and lasting value.
+                    </p>
+                    <p class="text-gray-700 text-base sm:text-lg leading-relaxed">
+                        What started as a small idea has grown into a thriving community of discerning shoppers and passionate creators. We believe in transparency, exceptional customer service, and building a trusted relationship with every person who chooses ProductHub. Our journey is continuously shaped by your feedback and our unwavering commitment to excellence.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-blue-600 text-white py-16 md:py-20 text-center">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-6 fade-in-up animate-delay-02">
+                Our Vision for the Future
+            </h2>
+            <p class="text-lg sm:text-xl mb-10 max-w-3xl mx-auto opacity-90 fade-in-up animate-delay-04">
+                We envision a future where online shopping is seamless, sustainable, and truly satisfying. ProductHub is continuously evolving, leveraging cutting-edge technology and a deep understanding of consumer needs to bring you the best products and an unmatched shopping journey.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl mx-auto mt-12">
+                <div class="bg-white text-blue-700 p-6 rounded-lg shadow-md fade-in-up animate-delay-06">
+                    <p class="text-4xl font-bold mb-2">10K+</p>
+                    <p class="text-lg">Happy Customers</p>
+                </div>
+                <div class="bg-white text-blue-700 p-6 rounded-lg shadow-md fade-in-up animate-delay-08">
+                    <p class="text-4xl font-bold mb-2">500+</p>
+                    <p class="text-lg">Unique Products</p>
+                </div>
+                <div class="bg-white text-blue-700 p-6 rounded-lg shadow-md fade-in-up animate-delay-10">
+                    <p class="text-4xl font-bold mb-2">24/7</p>
+                    <p class="text-lg">Customer Support</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-gradient-to-br from-gray-50 to-blue-50 py-16 md:py-20 text-center">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-6 fade-in-up animate-delay-02">
+                Ready to Experience ProductHub?
+            </h2>
+            <p class="text-lg sm:text-xl text-gray-700 mb-10 max-w-2xl mx-auto opacity-90 fade-in-up animate-delay-04">
+                Explore our curated collection and discover why ProductHub is your ultimate shopping destination.
+            </p>
+            <a href="index.html" class="inline-block btn-primary text-white font-bold py-3 px-8 sm:py-4 sm:px-10 rounded-full shadow-lg text-lg sm:text-xl fade-in-up animate-delay-06">
+                Shop Now
+            </a>
+        </div>
+    </section>
+</body>
+</html>
